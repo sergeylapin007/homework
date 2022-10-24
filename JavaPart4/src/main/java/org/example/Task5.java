@@ -27,12 +27,8 @@ public class Task5 {
         values.add("String4");
         values.add("String5");
 
-        int [] testKeys = new int[]{1,2,3,4,5};
-        String [] testValues = new String[]{"str1","str2","str3"};
 
         System.out.println(createSortedMap(keys,values));
-
-
     }
 
     public static <K, V> Map<K, V> createSortedMap (List <? extends K> a, List <? extends V> b) {
@@ -52,7 +48,6 @@ public class Task5 {
                 result.put(keys.get(i), null);
             }
         }
-
         return result;
     }
 }

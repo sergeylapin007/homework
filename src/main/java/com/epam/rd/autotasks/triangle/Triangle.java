@@ -26,15 +26,34 @@ class Triangle {
     }
 
     public double area() {
-        double square = 0.5 * (xA * (yB - yC) - xB * (yA - yC) + xC *(yA - yB));
-        return Math.abs(square);
+            double square = 0.5 * (xA * (yB - yC) - xB * (yA - yC) + xC * (yA - yB));
+            return Math.abs(square);
     }
 
-    public Point centroid(){
-        double temp1 = (xA + xB + xC) / 3;
-        double temp2 = (yA + yB + yC) / 3;
-        Point centroid = new Point(temp1,temp2);
+    public Point centroid() {
+//            if (area() == 0){
+//                throw new IllegalArgumentException();
+        Point centroid = null;
+            try
+            {
+                double temp1 = (xA + xB + xC) / 3;
+                double temp2 = (yA + yB + yC) / 3;
+                centroid = new Point(temp1,temp2);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+            if (area() == 0.0){
+                throw new IllegalArgumentException();
+            }
         return centroid;
     }
 
+    public static void main (String[] args) {
+        Triangle test = new Triangle(new Point(1, 3), new Point(2, 6), new Point(3, 9));
+        double result = test.area();
+        Point centroid = test.centroid();
+        System.out.println(result);
+        System.out.println("x= " + centroid.getX() + "," + "y= " + centroid.getY());
+
+    };
 }

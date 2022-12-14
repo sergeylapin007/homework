@@ -12,7 +12,7 @@ import java.time.Duration;
 public class BeforeBasketPopup extends BaseObjectPage {
 
     @FindBy(css = "button.order-now")
-    private WebElement createOrderButton;
+    public WebElement createOrderButton;
     public BeforeBasketPopup(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);

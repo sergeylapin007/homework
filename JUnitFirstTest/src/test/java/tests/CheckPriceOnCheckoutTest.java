@@ -7,7 +7,7 @@ import pages.*;
 public class CheckPriceOnCheckoutTest extends BaseTestCase {
 
     @Test
-    public void CheckPriceOnCheckout () throws InterruptedException {
+    public void CheckPriceOnCheckout () {
         HomePage homePage = new HomePage(driver);
         homePage.openHomePage();
         ProductListingPage listingPage = homePage.searchProduct("Iphone 12");
@@ -18,7 +18,7 @@ public class CheckPriceOnCheckoutTest extends BaseTestCase {
         checkoutPage.openDeliverySection();
         String actualProductPrice = checkoutPage.getProductPrice();
         String actualTotalPrice = checkoutPage.getTotalPrice();
-        Assert.assertEquals("31 999 ₴",actualProductPrice);
-        Assert.assertEquals("31 999 ₴",actualTotalPrice);
+        Assert.assertEquals("32 499 ₴",actualProductPrice);
+        Assert.assertEquals("32 499 ₴",actualTotalPrice);
     }
 }

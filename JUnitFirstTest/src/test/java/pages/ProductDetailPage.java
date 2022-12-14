@@ -13,7 +13,7 @@ import java.time.Duration;
 public class ProductDetailPage extends BaseObjectPage {
 
     @FindBy (id = "product-buy-button")
-    private WebElement buyButton;
+    public WebElement buyButton;
 
     public ProductDetailPage(WebDriver driver) {
         super(driver);

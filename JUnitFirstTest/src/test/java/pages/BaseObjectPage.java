@@ -3,11 +3,11 @@ package pages;
 import org.openqa.selenium.WebDriver;
 
 public class BaseObjectPage {
-    protected final WebDriver driver;
+    public static WebDriver driver;
 
-    protected final String HOMEPAGE_URL = "https://allo.ua/ru/";
+    public final String HOMEPAGE_URL = "https://allo.ua/ru/";
 
-    public BaseObjectPage(WebDriver driver) {
-        this.driver = driver;
+    public BaseObjectPage(WebDriver value) {
+        driver = value;
     }
 }

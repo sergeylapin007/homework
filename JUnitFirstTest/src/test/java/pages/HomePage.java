@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,10 +12,10 @@ import java.time.Duration;
 public class HomePage extends BaseObjectPage {
 
     @FindBy (name = "search")
-    private WebElement searchField;
+    public WebElement searchField;
 
     @FindBy (css = "button.search-form__submit-button")
-    private WebElement submitSearchButton;
+    public WebElement submitSearchButton;
 
 
     public HomePage(WebDriver driver) {

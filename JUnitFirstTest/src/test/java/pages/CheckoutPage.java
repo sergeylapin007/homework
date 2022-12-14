@@ -13,34 +13,34 @@ import java.time.Duration;
 public class CheckoutPage extends BaseObjectPage {
 
     @FindBy(id = "onepage-customer-name")
-    private WebElement nameField;
+    public WebElement nameField;
 
     @FindBy(id = "onepage-customer-telephone")
-    private WebElement phoneField;
+    public WebElement phoneField;
 
     @FindBy(id = "onepage-customer-email")
-    private WebElement emailField;
+    public WebElement emailField;
 
     @FindBy(id = "select-city")
-    private WebElement cityDropdown;
+    public WebElement cityDropdown;
 
     @FindBy(css = "ul.custom_select_list li:last-child")
-    private WebElement customCityOptionInCityDropdown;
+    public WebElement customCityOptionInCityDropdown;
 
     @FindBy(id = "city")
-    private WebElement inputCityField;
+    public WebElement inputCityField;
 
     @FindBy(css = "ul.onepage_tabs li:first-child")
-    private WebElement newUserTab;
+    public WebElement newUserTab;
 
     @FindBy(css = "p.onepage_product_new_price")
-    private WebElement productPrice;
+    public WebElement productPrice;
 
     @FindBy(css = "span.mini_cart_sum_price")
-    private WebElement totalPrice;
+    public WebElement totalPrice;
 
     @FindBy(id = "second-step-button")
-    private WebElement selectDeliveryButton;
+    public WebElement selectDeliveryButton;
 
 
     public CheckoutPage(WebDriver driver) {

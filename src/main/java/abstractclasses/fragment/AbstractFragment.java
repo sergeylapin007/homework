@@ -9,4 +9,8 @@ public abstract class AbstractFragment {
     public void setRootElement(WebElement element) {
         this.rootElement = element;
     }
+
+    public WebElement getRootElement() {
+        return rootElement;
+    }
 }

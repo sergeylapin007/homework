@@ -49,22 +49,22 @@ public class steps {
         beforeBasketPopup.createOrderButton.click();
     }
 
-    @And("enter {string} text in the Name field")
+    @And("^enter \"[A-Za-zА-Яа-я]+\" text in the Name field$")
     public void enterTextInTheNameField(String name) {
         checkoutPage.nameField.sendKeys(name);
     }
 
-    @And("enter {string} text in the Phone field")
+    @And("^enter \"[+]?[\\d]{9,12}\" text in the Phone field$")
     public void enterTextInThePhoneField(String phone) {
         checkoutPage.phoneField.sendKeys(phone);
     }
 
-    @And("enter {string} text in the Email field")
+    @And("^enter \"[\\w]+@[a-z]+.[a-z]+\" text in the Email field$")
     public void enterTextInTheEmailField(String email) {
         checkoutPage.emailField.sendKeys(email);
     }
 
-    @And("find the the following city {string} in the City dropdown")
+    @And("^find the the following city \"[A-Za-zА-Яа-я]+\" in the City dropdown$")
     public void selectValueInTheCityDropdown(String city) {
         checkoutPage.cityDropdown.click();
         checkoutPage.customCityOptionInCityDropdown.click();
@@ -77,17 +77,17 @@ public class steps {
         checkoutPage.selectDeliveryButton.click();
     }
 
-    @And("total price is equal to {string}")
+    @And("^total price is equal to \"\\d* \\d* ₴\"$")
     public void totalPriceIsEqualTo(String expectedResult) {
         Assert.assertEquals(expectedResult,checkoutPage.getTotalPrice());
     }
 
-    @And("wait for {int} seconds")
+    @And("^wait for \"[1-9]+\" seconds$")
     public void waitForSeconds(int time) throws InterruptedException {
         Thread.sleep(1000L * time);
     }
 
-    @And("product price is equal to {string}")
+    @And("^product price is equal to \"\\d* \\d* ₴\"$")
     public void productPriceIsEqualTo(String expectedResult) {
         Assert.assertEquals(expectedResult,checkoutPage.getProductPrice());
     }

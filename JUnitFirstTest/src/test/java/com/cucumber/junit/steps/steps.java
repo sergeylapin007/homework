@@ -59,7 +59,7 @@ public class steps {
         checkoutPage.phoneField.sendKeys(phone);
     }
 
-    @And("^enter \"[\\w]+@[a-z]+.[a-z]+\" text in the Email field$")
+    @And("^enter \"[\\w]+@[a-z]+\\.[a-z]+\" text in the Email field$")
     public void enterTextInTheEmailField(String email) {
         checkoutPage.emailField.sendKeys(email);
     }
